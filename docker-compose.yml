@@ -1,0 +1,21 @@
+version: "3.8"
+
+services:
+  app:
+    image: iot-fe-tool:v1
+    container_name: iot-fe-tool
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      REACT_APP_BASE_URL: ${REACT_APP_BASE_URL}
+      REACT_APP_HARD_TOKEN: ${REACT_APP_HARD_TOKEN}
+      REACT_APP_KEY: ${REACT_APP_KEY}
+      REACT_APP_IV: ${REACT_APP_IV}
+      PORT: ${PORT}
+      REACT_APP_GMAP_BASE_URL: ${REACT_APP_GMAP_BASE_URL}
+      REACT_APP_DEVICE_TOKEN: ${REACT_APP_DEVICE_TOKEN}
+      REACT_APP_CAMERA_TOKEN: ${REACT_APP_CAMERA_TOKEN}
+    ports:
+      - "${PORT}:8080"
+    restart: always
