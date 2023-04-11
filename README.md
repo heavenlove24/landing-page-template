@@ -21,3 +21,12 @@ This is Simple Product or Company Landing Website Made Using <br/>
 ### ContactUsPage
 <hr />
 <img src="https://user-images.githubusercontent.com/54361799/117673607-8f426200-b1c8-11eb-8e26-741a57aa01fb.png" />
+
+## Biểu đồ
+```mermaid
+graph LR
+   A(Kafka)-->|listen events| B{Consumer data warehouse}
+   B-->|log| C[(Database mongodb)]
+   B-->|sorting data| D[(Database mysql)]
+   B-->|log pkg ticket| E[ticket.ghtk.vn]
+```
